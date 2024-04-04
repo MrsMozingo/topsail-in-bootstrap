@@ -1,0 +1,342 @@
+/* Main */
+.site {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Covers Header, main content, footer */
+    grid-template-columns: 100%;
+  }
+
+  .main-section {
+    color:#2c2946;
+  }
+
+body {
+    margin: 0;
+}
+
+body, button, input, select, textarea {
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+	font-size: 20px;
+	line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    clear: both;
+    font-family: 'Varta', 'Helvetica', 'Arial', sans-serif;
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+
+/* Header and Nav*/
+.topnav {
+    background-color: #2c2946;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #09d0a8;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #cef6fe;
+    color: black;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+
+/* Sticky Navbar */
+.topnav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 100%;
+    max-height: 20vh;
+    margin: 0 auto;
+}
+
+
+/* masthead section styling */
+.logo,
+.title-text {
+    text-align: center;
+    color: #cef6fe;
+}
+
+.title-text {
+    font-family: "Sarina", cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -4.9em;
+    margin-bottom: 1.5em;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-shadow:
+    -2px -2px 0 #2c2946,  
+    1px -1px 0 #2c2946,
+    -2px 2px 0 #2c2946,
+    1px 1px 0 #2c2946;
+    text-shadow:
+        5px 5px 5px #2c2946,
+        0 0 10px #8b0000,
+        0 0 20px #dc143c,
+        0 0 30px #ff4500,
+        0 0 40px #ff8c00,
+        0 0 50px #ffd700,
+        0 0 60px #ffa500,
+        0 0 70px #ffdab9,
+        0 0 80px #faebd7,
+        0 0 90px #fffacd,
+        0 0 150px #2c2946;
+}
+
+
+/* main content section styling */
+.main-content {
+    background-color: #89e7ff64;
+    padding: 4em 3em 1em 3em;
+}
+
+.image-grid-section {
+    padding: 0 2em 4em 2em;
+    background-color: #89e7ff64;
+    display: flex;
+    justify-content: center;
+}
+
+.image-grid-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Creates a flexible grid that stays below 200px regardless of the size of the screen or the responsiveness of the page */
+    gap: 40px;
+    justify-content: center;
+}
+
+.grid-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* side-by-side section styling */
+.side-by-side-section {
+    background-color: #fffada; /* yellow background color? */
+    padding: 2em;
+}
+
+.side-by-side {
+    padding: 2em;
+    background: #09d0a8;
+    color: white;
+    border-radius: 20px;
+}
+
+.side-by-side:last-of-type {
+    background: #2c2946;
+}
+
+.side-by-side-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+.side-by-side-section .side-by-side:nth-of-type(1),
+.side-by-side-section .side-by-side:nth-of-type(4) {
+    background: #09d0a8;
+    color: #2c2946;
+}
+
+.side-by-side-section .side-by-side:nth-of-type(1) a,
+.side-by-side-section .side-by-side:nth-of-type(4) a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #cef6fe;
+    color: #2c2946;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-by-side-section .side-by-side:nth-of-type(2),
+.side-by-side-section .side-by-side:nth-of-type(3) {
+    background: #2c2946;
+    color: white;
+}
+
+.side-by-side-section .side-by-side:nth-of-type(2) a,
+.side-by-side-section .side-by-side:nth-of-type(3) a {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #cef6fe;
+    color: #2c2946;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-by-side-section .side-by-side a:hover {
+    font-weight: bold;
+    opacity: 0.85;
+}
+
+.side-by-side-section .side-by-side .side-by-side-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+
+/* Footer styling */
+.footer {
+    padding: 2em;
+    background: #cef6fe;
+    color: #2c2946;
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: -25px;
+}
+
+.footer a {
+    color: #2c2946;
+    text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus {
+    font-weight: bold;
+}
+
+.footer .fa-brands {
+    font-size: 1em; /* Default icon size */
+    transition: font-size 0.3s ease; /* Produces smooth transition when increasing the font size due to hover */
+}
+
+.footer .fa-brands:hover {
+    font-size: 1.25em; /* Increase icon size on hover */
+}
+
+.footer .footer-gap {
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 1440px) {
+    .side-by-side-section {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 25px;
+        justify-content: center;
+        padding: 2em;
+    }
+    
+    .side-by-side-section .side-by-side {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+      /* Reset .side-by-side divs */
+      .side-by-side-section .side-by-side {
+        background: #2c2946;
+        color: white;
+      }
+      
+      .side-by-side-section .side-by-side:nth-of-type(odd) {
+        background: #09d0a8;
+        color: #2c2946;
+      }
+      
+      .side-by-side-section .side-by-side:nth-of-type(even) {
+        background: #2c2946;
+        color: white;
+      }   
+}
+
+@media screen and (max-width: 768px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .side-by-side-section {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+      
+    /* This resets .side-by-side divs */
+    .side-by-side-section .side-by-side {
+        background: #2c2946;
+        color: white;
+    }
+      
+    .side-by-side-section .side-by-side:nth-of-type(odd) {
+        background: #09d0a8;
+        color: #2c2946;
+    }
+      
+    .side-by-side-section .side-by-side:nth-of-type(even) {
+        background: #2c2946;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 1159px) {
+    .image-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1160px) {
+    .image-grid-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+/* single-column layout */
+@media screen and (max-width: 480px) {
+    .image-grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* NOTE: All images are CC0 images sourced from Pexels and can be found within the WEB-125 Topsail Beach Site folder located here: https://www.pexels.com/collections/web-125-topsail-beach-site-ahrsliz/ */
